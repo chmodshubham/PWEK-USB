@@ -61,3 +61,18 @@ pip install PyYAML
 ```bash
 sudo apt install net-tools
 ```
+
+## Deployment
+
+```bash
+sudo su -
+git clone https://github.com/ShubhamKumar89/PWEK.git --recursive --branch=main ~/pwek
+cd ~/pwek
+./pwek_aio_provision.py --init-config > prov.yml
+```
+
+Copy the changes from the `prov.yml` in this repository to the `prov.yml` in the pwek directory.
+
+```bash
+./pwek_aio_provision.py --config prov.yml --run-esp-for-usb-boot
+```
