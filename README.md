@@ -55,3 +55,9 @@ sudo apt install git
 sudo apt install python3-pip
 pip install PyYAML
 ```
+
+#### netstat
+
+```bash
+sudo apt install net-tools
+```
