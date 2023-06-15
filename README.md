@@ -45,5 +45,6 @@ sudo apt install git
 #### Python 3.6 with PyYAML
 
 ```bash
-pip install pyyaml
+sudo apt install python3-pip
+pip install PyYAML
 ```
