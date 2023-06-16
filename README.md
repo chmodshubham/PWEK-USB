@@ -60,6 +60,9 @@ pip install PyYAML
 
 ```bash
 sudo apt install net-tools
+
+# to get the progress output of flashing the USB drive
+sudo apt install pv 
 ```
 
 ## Deployment
