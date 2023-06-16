@@ -56,7 +56,7 @@ sudo apt install python3-pip
 pip install PyYAML
 ```
 
-#### netstat
+#### Others
 
 ```bash
 sudo apt install net-tools
