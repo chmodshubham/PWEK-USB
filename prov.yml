@@ -34,8 +34,8 @@ docker:
   registry_mirrors: []
   # dockerhub credentials - applies only to live os stage
   dockerhub:
-    username: ''
-    password: ''
+    username: ""
+    password: ""
 
 # ntp server address used during deploy
 ntp_server: ''
@@ -68,14 +68,14 @@ profiles:
     group_vars:
       groups:
         all:
-          git_repo_token: ''
+          git_repo_token: ""
           proxy_env:
             # Proxy URLs to be used for HTTP, HTTPS and FTP
-            http_proxy: ''
-            https_proxy: ''
-            ftp_proxy: ''
+            http_proxy: ""
+            https_proxy: ""
+            ftp_proxy: ""
             # No proxy setting contains addresses and networks that should not be accessed using proxy (e.g. local network, Kubernetes CNI networks)
-            no_proxy: ''
+            no_proxy: ""
 
           fronthaul_e810_enable: true
           # Option #1
