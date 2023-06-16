@@ -52,8 +52,9 @@ sudo apt install git
 #### Python 3.6 with PyYAML
 
 ```bash
-sudo apt install python3-pip
-pip install PyYAML
+sudo apt update
+sudo apt install -y python3 python3-pip
+pip3 install PyYAML fqdn
 ```
 
 #### Others
@@ -69,6 +70,7 @@ sudo apt install pv
 
 ```bash
 sudo su -
+mkdir /opt/pwek_offline_files/
 git clone https://github.com/ShubhamKumar89/PWEK.git --recursive --branch=main ~/pwek
 cd ~/pwek
 ./pwek_aio_provision.py --init-config > prov.yml
