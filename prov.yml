@@ -44,13 +44,13 @@ ntp_server: ''
 # Please avoid using special characters, such as "#" is not supported
 hosts:
   - name: smartedge-open-pwek-server-1
-    mac: 72:9f:cc:02:90:f8  # change according to your vm's mac address
+    mac: 8e:6c:6b:46:e2:55  # change according to your vm's mac address
 
 # list of profiles (at least one profile should be defined)
 profiles:
   - name: Smart_Edge_Open_Private_Wireless_Experience_Kit
     bare_os: false  # enable only if donnot need install Experience_Kit
-    url: https://github.com/ShubhamKumar89/esp-profile-ubuntu.git
+    url: https://github.com/ShubhamKumar89/profiles.git
     branch: slim
     scenario: multi-node       # possible scenarios: multi-node only
     experience_kit:
