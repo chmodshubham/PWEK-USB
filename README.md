@@ -68,16 +68,25 @@ sudo apt install pv
 
 ## Deployment
 
+A directory is missing, `/opt/pwek_offline_files/` which is used during pwek-deployment. (**skip it for now**)
+
 ```bash
 sudo su -
-mkdir /opt/pwek_offline_files/
 git clone https://github.com/ShubhamKumar89/PWEK.git --recursive --branch=main ~/pwek
 cd ~/pwek
 ./pwek_aio_provision.py --init-config > prov.yml
 ```
 
-Copy the changes from the `prov.yml` in this repository to the `prov.yml` in the pwek directory.
+Copy the changes from the `prov.yml` in this repository to the `prov.yml` in the pwek directory. And also change the mac addreess inside the file `prov.yml` according to your mac address.
 
 ```bash
 ./pwek_aio_provision.py --config prov.yml --run-esp-for-usb-boot
+```
+
+## Flash the Installation Image
+
+Change the `sdb` with your flash drive. To check all the attached USBs, use `lsblk`.
+
+```bash
+./pwek_flash.sh efi ./out/Smart_Edge_Open_Private_Wireless_Experience_Kit-efi.img --dev /dev/sdb1
 ```
