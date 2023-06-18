@@ -1,3 +1,7 @@
+# Cloning pwek
+
+``` git clone https://github.com/NgKore47/Smart-edge-PWEK.git --recursive --branch=main ~/pwek ```
+
 # PWEK Deployment
 
 Deployment of ESP(Edge Software Provisioner) using USB Drive Method.
