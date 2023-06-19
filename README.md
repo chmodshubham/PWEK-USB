@@ -39,13 +39,19 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 #### docker-composes
 
 ```bash
-DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
-mkdir -p $DOCKER_CONFIG/cli-plugins
-curl -SL https://github.com/docker/compose/releases/download/v2.18.1/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
-chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+# standalone docker-compose installation
+sudo curl -SL https://github.com/docker/compose/releases/download/v2.18.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 
 # to verify the installation
 docker compose version
+```
+
+If `docker-compose` is not installed correctly, then use this(*least recommended*):
+
+```bash
+sudo apt update
+sudo apt install docker-compose
 ```
 
 #### git
@@ -66,6 +72,9 @@ pip3 install PyYAML fqdn
 
 ```bash
 sudo apt install net-tools
+
+# for searching 
+sudo apt install silversearcher-ag
 
 # to get the progress output of flashing the USB drive
 sudo apt install pv 
